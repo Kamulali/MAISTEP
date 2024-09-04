@@ -16,15 +16,18 @@ from sklearn.svm import SVR
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsRegressor
+from sklearn.preprocessing import RobustScaler
 from scipy.optimize import nnls
 import joblib
 import math
 import os
-from statistics_xt_code import calculate_stats
-from plot_generation import analyze_data
-from sklearn.preprocessing import RobustScaler
+
+# custom modules
+from computing_statistics import calculate_stats
+from generating_plot import analyze_data
 
 
+# load data
 def load_dataset(file_path):
     """Load the dataset from the given file path."""
     dataset = pd.read_csv(file_path, low_memory=False, comment='#', sep='\t')
