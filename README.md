@@ -48,23 +48,6 @@ This project involves training various machine learning algorithms on stellar mo
 
 ## Usage
 
-## Data Format
-
-### Input Data File
-The input data file should be in a tab-separated `.csv` format. It includes both **features** (independent variables) and **target labels** (dependent variables).
-
-- **Training Features**:
-  - `Teff`: Effective temperature.
-  - `[Fe/H]`: Metallicity.
-  - `L`: Luminosity.
-
-- **Training Target Labels**:
-  - `mass`: Mass of the model.
-  - `radius`: Radius of the model.
-  - `age`: Age of the model.
-
-#### Sample format for input data:
-
 1. **Loading and Preprocessing the Data**:
    The `load_dataset()` and `preprocess_transformations()` functions are used to load the data from a file and apply necessary transformations.
 
@@ -76,6 +59,28 @@ The input data file should be in a tab-separated `.csv` format. It includes both
     dataset = load_dataset(file_path)
     transformed_data = preprocess_transformations(dataset, apply_function)
     ```
+## Data Format
+
+### Input Data File
+The stellar grid for training the ML algorithms should be in a tab-separated `.csv` format. It includes both **features** (independent variables) and **target labels** (dependent variables).
+
+- **Training Features**:
+  - `Teff`: Effective temperature.
+  - `[Fe/H]`: Metallicity.
+  - `L`: Luminosity.
+
+- **Training Target Labels**:
+  - `mass`:
+  - `radius`: 
+  - `age`:
+
+#### Sample format for input data:
+
+### Observation Data File
+The observation data file must include object names (col_1) and corresponding observed values (col_2,col_4,col_6,....) and uncertainties (col_3,col_5,col_7,....) for the features (`Teff`, `[Fe/H]`, `L`). It should also be a tab-separated file.
+
+#### Sample format for observation data:
+
 
 2. **Training the Models**:
    Train models for each target (mass, radius, age) using the `train_base_models()` function.
