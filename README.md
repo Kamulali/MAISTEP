@@ -48,6 +48,23 @@ This project involves training various machine learning algorithms on stellar mo
 
 ## Usage
 
+## Data Format
+
+### Input Data File
+The input data file should be in a tab-separated `.csv` format. It includes both **features** (independent variables) and **target labels** (dependent variables).
+
+- **Training Features**:
+  - `Teff`: Effective temperature.
+  - `[Fe/H]`: Metallicity.
+  - `L`: Luminosity.
+
+- **Training Target Labels**:
+  - `mass`: Mass of the model.
+  - `radius`: Radius of the model.
+  - `age`: Age of the model.
+
+#### Sample format for input data:
+
 1. **Loading and Preprocessing the Data**:
    The `load_dataset()` and `preprocess_transformations()` functions are used to load the data from a file and apply necessary transformations.
 
