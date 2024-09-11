@@ -1,6 +1,6 @@
-# Machine Learning Grid Project
+# MAISTEP (Machine learning Algorithms for Inferring STEllar Properties) Project
 
-This repository contains code for training, evaluating, and predicting using various machine learning models on astrophysical data, specifically focused on stellar parameters like mass, radius, and age.
+This repository contains code for characterizing stars, with specific focus on stellar parameters like mass, radius, and age using a stacking-like ML approach 
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -16,7 +16,7 @@ This repository contains code for training, evaluating, and predicting using var
 
 ## Project Overview
 
-This project involves using machine learning models to predict stellar parameters from observational data. It supports ensemble models like ExtraTreesRegressor, XGBoost, and more. Additionally, the project includes methods for generating noisy datasets and making predictions with uncertainty quantification.
+This project involves training various machine learning algorithms on stellar models to predict stellar parameters from observational data. It supports ensemble algorithms like ExtraTreesRegressor, XGBoost, and more. Additionally, the project includes methods for generating noisy datasets and making predictions with uncertainty quantification.
 
 ## Features
 
