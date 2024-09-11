@@ -21,7 +21,7 @@ This project involves training various machine learning algorithms on stellar mo
 ## Features
 
 - **Preprocessing and Transformation**: Transformations such as logarithmic scaling and filtering on astrophysical data.
-- **Ensemble Modeling**: Use of ensemble regressors (e.g., Extra Trees, XGBoost) to train models on stellar features.
+- **Ensemble Modeling**: Use of various regressors (e.g., Extra Trees, XGBoost) to train models on stellar features.
 - **Cross-Validation**: K-Fold cross-validation for model evaluation.
 - **Uncertainty Estimation**: Generate noisy data to provide predictions with uncertainty.
 - **Prediction for Real Data**: Load real observational data, make predictions, and calculate statistical metrics.
@@ -79,7 +79,7 @@ The stellar grid for training the ML algorithms should be in a tab-separated `.c
 ##### 5777    0.0       1.0   1.0    1.0      4.6
 
 ### Observation Data File
-The observation data file must include object names (col_1) and corresponding observed values (col_2,col_4,col_6,....) and uncertainties (col_3,col_5,col_7,....) for the features (`Teff`, `[Fe/H]`, `L`). It should also be a tab-separated file.
+The observation data file must include object names (col_1) and corresponding observed values (col_2,col_4,col_6,...) and uncertainties (col_3,col_5,col_7,...) for the features (`Teff`, `[Fe/H]`, `L`). It should also be a tab-separated file.
 
 2. **Training the Models**:
    Train models for each target (mass, radius, age) using the `train_base_models()` function.
