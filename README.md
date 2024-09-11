@@ -75,8 +75,8 @@ The stellar grid for training the ML algorithms should be in a tab-separated `.c
   - `age`:
 
 #### Sample format for input data:
-Teff    [Fe/H]    L     mass   radius   age
-5777    0.0       1.0   1.0    1.0      4.6
+#### Teff    [Fe/H]    L     mass   radius   age
+#### 5777    0.0       1.0   1.0    1.0      4.6
 
 ### Observation Data File
 The observation data file must include object names (col_1) and corresponding observed values (col_2,col_4,col_6,....) and uncertainties (col_3,col_5,col_7,....) for the features (`Teff`, `[Fe/H]`, `L`). It should also be a tab-separated file.
