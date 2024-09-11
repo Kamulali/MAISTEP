@@ -31,8 +31,8 @@ This project involves training various machine learning algorithms on stellar mo
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/ml_grid_project.git
-    cd ml_grid_project
+    git clone https://github.com/Kamulali/MAISTEP_code.git
+    cd MAISTEP_code
     ```
 
 2. Create a virtual environment and activate it:
