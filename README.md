@@ -65,14 +65,14 @@ This project involves training various machine learning algorithms on stellar mo
 The stellar grid for training the ML algorithms should be in a tab-separated `.csv` format. It includes both **features** (independent variables) and **target labels** (dependent variables).
 
 - **Training Features**:
-  - `Teff`: Effective temperature.
-  - `[Fe/H]`: Metallicity.
-  - `L`: Luminosity.
+  - `Teff`: Effective temperature (K).
+  - `[Fe/H]`: Metallicity (dex).
+  - `L`: Luminosity (Lsolar).
 
 - **Training Target Labels**:
-  - `mass`:
-  - `radius`: 
-  - `age`:
+  - `mass`: (Msolar)
+  - `radius`: (Rsolar)
+  - `age`: (Gyr)
 
 #### Sample format for input data:
 ##### Teff    [Fe/H]    L     mass   radius   age
@@ -80,9 +80,6 @@ The stellar grid for training the ML algorithms should be in a tab-separated `.c
 
 ### Observation Data File
 The observation data file must include object names (col_1) and corresponding observed values (col_2,col_4,col_6,....) and uncertainties (col_3,col_5,col_7,....) for the features (`Teff`, `[Fe/H]`, `L`). It should also be a tab-separated file.
-
-#### Sample format for observation data:
-
 
 2. **Training the Models**:
    Train models for each target (mass, radius, age) using the `train_base_models()` function.
@@ -99,6 +96,9 @@ The observation data file must include object names (col_1) and corresponding ob
     ```python
     predict_noisy_data(base_models_dict, meta_model_coefficients_dict, noisy_data_dfs, scaler, obj_names)
     ```
+#### Sample format for observation data:
+##### Object Name    Teff    Teff_error    [Fe/H]    [Fe/H]_error    L    L_error
+##### Sun            5777    50            0.0       0.1           1.0  0.05
 
 4. **Results Visualization**:
    Save and visualize results using histograms for predicted parameters.
@@ -128,6 +128,13 @@ The observation data file must include object names (col_1) and corresponding ob
 - Predicted results are stored as `.txt` files for each object.
 - Summary statistics (median, upper and lower bounds) are calculated for mass, radius, and age.
 - Visualizations are created for the distribution of results.
+
+### Output Data
+
+#### Sample Format:
+##### Object Name    mass   mass_upper_bound  mass_lower_bound  radius   radius_upper_bound  radius_lower_bound  age   age_upper_bound  age_lower_bound
+##### Sun            1.0    0.02              -0.02             1.0      0.01                -0.01               4.6   0.1              -0.1
+
 
 ## Contributing
 
