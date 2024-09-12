@@ -1,5 +1,7 @@
 # MAISTEP (Machine learning Algorithms for Inferring STEllar Properties) Project
 
+![Alt text for the image](path/to/image.png)
+
 This repository contains code for characterizing stars, with specific focus on parameters like radius, mass, and age using a stacking-like ML approach 
 
 ## Table of Contents
